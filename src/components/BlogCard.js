@@ -1,13 +1,19 @@
 import React from "react";
 import { BiListPlus } from "react-icons/bi";
 import { useDispatch } from "react-redux";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { MdDeleteForever } from "react-icons/md";
-import { addToCart, removeFromCart } from "../redux/actions/productAction";
+import { removeFromCart } from "../redux/actions/productAction";
 
-const ProductCard = ({ product }) => {
+const BlogCard = ({ product }) => {
   const dispatch = useDispatch();
   const { pathname } = useLocation();
+  const navigate = useNavigate()
+
+  const seeDetails = (id) => {
+    navigate(`blog/${id}`)
+  }
+
   return (
     <div className='shadow-lg relative rounded-3xl border p-3 flex flex-col text-indigo-900'>
       {pathname.includes("cart") && (
@@ -16,28 +22,24 @@ const ProductCard = ({ product }) => {
         </div>
       )}
       <div className='h-52 w-52 mx-auto'>
-        <img src={product.image} alt={product.model} />
+        <img src={product.image} alt={product.name} />
       </div>
-      <h1 className='font-bold text-center'>{product.model}</h1>
+      <h1 className='font-bold text-center'>{product.name}</h1>
       <p className='text-center font-semibold mb-3'>Rating: {product.rating}</p>
       <div className=' flex-1'>
         <ul className='space-y-2'>
-          {product.keyFeature.map((feature) => {
-            return (
-              <li key={feature} className='text-sm '>
-                {feature}
-              </li>
-            );
-          })}
+          <li className='text-sm '>
+            {product.details}
+          </li>
         </ul>
       </div>
       <div className='flex gap-2 mt-5'>
         {!pathname.includes("cart") && (
           <button
-            onClick={() => dispatch(addToCart(product))}
+            onClick={() => seeDetails(product._id)}
             className='bg-indigo-500 rounded-full py-1 px-2 flex-1 text-white text-bold'
           >
-            Add to cart
+            See Details
           </button>
         )}
 
@@ -64,4 +66,4 @@ const ProductCard = ({ product }) => {
   );
 };
 
-export default ProductCard;
+export default BlogCard;

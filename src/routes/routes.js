@@ -4,9 +4,10 @@ import Main from "../layout/Main/Main";
 import AddProduct from "../pages/Dashboard/AddProduct";
 import ProductList from "../pages/Dashboard/ProductList";
 import About from "../pages/Main/About";
-import Cart from "../pages/Main/Cart";
+import ReadingHistory from "../pages/Main/ReadingHistory";
 import Home from "../pages/Main/Home";
 import TopRated from "../pages/Main/TopRated";
+import Blog from "../pages/Main/Blog";
 
 const routes = createBrowserRouter([
   {
@@ -26,8 +27,12 @@ const routes = createBrowserRouter([
         element: <TopRated />,
       },
       {
-        path: "cart",
-        element: <Cart />,
+        path: "reading-history",
+        element: <ReadingHistory />,
+      },
+      {
+        path: "blog/:id",
+        element: <Blog />,
       },
     ],
   },

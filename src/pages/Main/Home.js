@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import ProductCard from "../../components/ProductCard";
+import BlogCard from "../../components/BlogCard";
 
 const Home = () => {
 
@@ -26,7 +26,7 @@ const Home = () => {
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14'>
         {products.map((product) => (
-          <ProductCard key={product.model} product={product} />
+          <BlogCard key={product.model} product={product} />
         ))}
       </div>
     </div>

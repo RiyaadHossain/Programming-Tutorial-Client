@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className='h-14 bg-indigo-200 rounded-full m-2 max-w-7xl mx-auto px-5'>
       <ul className='h-full  mx-auto flex justify-between items-center gap-3 font-semibold text-indigo-900'>
-        <h1>Moon Tech</h1>
+        <h1>Thoughts</h1>
 
         <li className='flex bg-white mx-auto h-8 w-full max-w-lg  rounded-full pr-3'>
           <input
@@ -31,15 +31,15 @@ const Navbar = () => {
           <Link to='/about'>About</Link>
         </li>
         <li>
-          <Link to='/dashboard'>Dashboard</Link>
+          <Link to='/dashboard'>Admin Control</Link>
         </li>
         <Link to='/'>
           <li title='Wishlist' className='bg-indigo-500 p-2 rounded-full'>
             <IoIosListBox className='text-white' />
           </li>
         </Link>
-        <Link to='/cart'>
-          <li title='cart' className='bg-indigo-500 p-2 rounded-full'>
+        <Link to='/reading-history'>
+          <li title='reading-history' className='bg-indigo-500 p-2 rounded-full'>
             <BsFillCartFill className='text-white ' />
           </li>
         </Link>
