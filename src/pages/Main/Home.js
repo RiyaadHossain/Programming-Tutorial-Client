@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useSelector } from "react-redux";
 import ProductCard from "../../components/ProductCard";
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:5000/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data.data));
-  }, []);
+  const products = useSelector(state => state.products.products)
+  console.log(products)
 
   const activeClass = "text-white  bg-indigo-500 border-white";
 
