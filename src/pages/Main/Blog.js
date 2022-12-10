@@ -18,14 +18,16 @@ export default function Blog() {
 
   return (
     <div className='blog-details'>
-      <div className='blog-image-container mb-3'><img className='blog-image' src={blog.image} alt='' /></div>
+      <div className='blog-image-container mb-3'><img className='blog-image w-4/5' src={blog.image} alt='' /></div>
       <div>
         <h2 className='text-3xl font-bold mb-4'>{blog.name}</h2>
-        <div className='mb-3 flex justify-between'><p className='flex items-center'> <BsPlayCircleFill /> <span className="font-semibold mx-2">Time: </span>{blog.time} min</p><p className='text-cyan-500 font-semibold'>{moment(blog.postedAt._d).format('MMM Do, YYYY')}</p></div>
+        <div className='mb-3 flex justify-between'>
+          <p className='flex items-center'>
+            <BsPlayCircleFill /> <span className="font-semibold mx-2">Time: </span>{blog.time} min</p>
+          <p className='text-cyan-500 font-semibold'>{moment(blog.postedAt._d).format('MMM Do, YYYY')}</p></div>
         <p className='text-lg font-thin'>{blog.details}</p>
         <div className='mt-5 flex gap-3'>
-          {blog.tags.map((tag, i) =>
-            <span key={i} className='border hover:bg-cyan-500 cursor-pointer hover:text-black text-cyan-500 border-cyan-600 text-sm px-3 py-[2px] rounded-full'>{tag}</span>
+          {blog.tags.map((tag, i) => { return tag && <span key={i} className='border hover:bg-cyan-500 cursor-pointer hover:text-black text-cyan-500 border-cyan-600 text-sm px-3 py-[2px] rounded-full'>{tag}</span>}
           )}
         </div>
       </div>

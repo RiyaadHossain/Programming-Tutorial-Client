@@ -27,8 +27,8 @@ const BlogCard = ({ blog }) => {
           <p> {blog.quantity} </p>
         </div>
       )}
-      <div className='h-52 w-80 mx-auto overflow-hidden mb-7'>
-        <img className="h-full w-full object-cover" src={blog.image} alt={blog.name} />
+      <div className='h-52 w-52 mx-auto overflow-hidden mb-7'>
+        <img className='h-full w-full object-cover' src={blog.image} alt={blog.name} />
       </div>
       <h1 className='font-bold '>{blog.name}</h1>
       <div className='my-3 flex justify-between'><p><span className="font-semibold">Time:</span> {blog.time}min</p><p className="text-cyan-500">{moment(blog.postedAt._d).format('MMM Do, YYYY')}</p></div>
@@ -42,7 +42,7 @@ const BlogCard = ({ blog }) => {
       <div className="flex flex-wrap mt-3 gap-2">{blog.tags.map((tag, i) =>
         tag && <span onClick={() => dispatch(filterByTag(tag))} key={i} className={`border hover:bg-cyan-500 cursor-pointer text-black ${tags.includes(tag) ? active : null} border-cyan-500 text-xs px-2 py-[2px] rounded-full`}>{tag}</span>
       )}</div>
-      <div className='flex gap-2 mt-5'>
+      {!pathname.includes('reading-history') ? <div className='flex gap-2 mt-5'>
 
         <button
           onClick={() => seeDetails(blog._id)}
@@ -58,7 +58,12 @@ const BlogCard = ({ blog }) => {
           <BiListPlus className='text-white' />
         </button>
 
-      </div>
+      </div> : <button
+        onClick={() => seeDetails(blog._id)}
+        className='bg-indigo-500 mt-5 rounded-full py-1 px-2 flex-1 text-white text-bold'
+      >
+        Already Read Content
+      </button>}
     </div>
   );
 };
