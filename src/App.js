@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { RouterProvider } from "react-router-dom";
-import { getTutorials } from "./redux/thunks/productThunk";
+import { getBlogs } from "./redux/thunks/blogThunk";
 import routes from "./routes/routes";
 
 function App() {
@@ -9,12 +9,12 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getTutorials())
+    dispatch(getBlogs())
   }, [dispatch])
 
   return (
     <div>
-        <RouterProvider router={routes} />
+      <RouterProvider router={routes} />
     </div>
   );
 }

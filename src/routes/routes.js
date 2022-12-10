@@ -3,7 +3,6 @@ import Dashboard from "../layout/Dashboard/Dashboard";
 import Main from "../layout/Main/Main";
 import AddProduct from "../pages/Dashboard/AddProduct";
 import ProductList from "../pages/Dashboard/ProductList";
-import About from "../pages/Main/About";
 import ReadingHistory from "../pages/Main/ReadingHistory";
 import Home from "../pages/Main/Home";
 import TopRated from "../pages/Main/TopRated";
@@ -17,10 +16,6 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-      },
-      {
-        path: "about",
-        element: <About />,
       },
       {
         path: "top-rated",

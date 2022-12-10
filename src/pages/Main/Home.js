@@ -4,8 +4,8 @@ import BlogCard from "../../components/BlogCard";
 
 const Home = () => {
 
-  const products = useSelector(state => state.products.products)
-  console.log(products)
+  const blogs = useSelector(state => state.blog.blogs)
+  console.log(blogs)
 
   const activeClass = "text-white  bg-indigo-500 border-white";
 
@@ -25,8 +25,8 @@ const Home = () => {
         </button>
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14'>
-        {products.map((product) => (
-          <BlogCard key={product.model} product={product} />
+        {blogs.map((blog) => (
+          <BlogCard key={blog.model} blog={blog} />
         ))}
       </div>
     </div>

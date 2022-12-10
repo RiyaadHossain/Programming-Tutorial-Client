@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsFillCartFill } from "react-icons/bs";
+import { FaHistory } from "react-icons/fa";
 import { IoIosListBox } from "react-icons/io";
 import { BiSearchAlt } from "react-icons/bi";
 
@@ -28,9 +28,6 @@ const Navbar = () => {
           <Link to='/top-rated'>Top Rated</Link>
         </li>
         <li>
-          <Link to='/about'>About</Link>
-        </li>
-        <li>
           <Link to='/dashboard'>Admin Control</Link>
         </li>
         <Link to='/'>
@@ -40,7 +37,7 @@ const Navbar = () => {
         </Link>
         <Link to='/reading-history'>
           <li title='reading-history' className='bg-indigo-500 p-2 rounded-full'>
-            <BsFillCartFill className='text-white ' />
+            <FaHistory className='text-white ' />
           </li>
         </Link>
       </ul>
