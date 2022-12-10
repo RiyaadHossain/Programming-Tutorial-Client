@@ -2,11 +2,17 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {BsPencilSquare} from "react-icons/bs"
 import { removeBlogThunk } from "../../redux/thunks/blogThunk";
+import { useNavigate } from "react-router-dom";
 
 const ProductList = () => {
 
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const blogs = useSelector(state => state.blog.blogs)
+
+  if (!blogs.length) {
+    return <h2 className="text-2xl font-bold">Nothing to show</h2>
+  }
 
   return (
     <div className='flex flex-col justify-center items-center h-full w-full '>
@@ -36,7 +42,7 @@ const ProductList = () => {
             </thead>
 
             <tbody className='text-sm divide-y divide-gray-100'>
-              {blogs.map(({ name, tags, time, status, _id }) => (
+              {blogs.map(({ name, tags, time, _id }) => (
                 <tr key={_id}>
                   <td className='p-2'>
                     <input type='checkbox' className='w-5 h-5' value='id-1' />
@@ -70,7 +76,7 @@ const ProductList = () => {
                           ></path>
                         </svg>
                       </button>
-                      <button>
+                      <button onClick={() => navigate(`update-blog/${_id}`)}>
                         <BsPencilSquare className="w-7 h-7 hover:text-blue-600 hover:bg-gray-100 p-1"/>
                       </button>
                     </div>

@@ -10,11 +10,11 @@ const Home = () => {
   let content = blogs
     // .filter(blog => blog.tags.forEach(blogTag => tags.includes(blogTag)))
     .map((blog) => (
-    <BlogCard key={blog._id} blog={blog} />
+      <BlogCard key={blog._id} blog={blog} />
     ))
-  
+
   if (!blogs.length) {
-    return <p>Loading...</p>
+    return <h2 className="text-2xl font-bold text-center mt-16">Nothig to show</h2>
   }
 
   const activeClass = "text-white  bg-indigo-500 border-white";

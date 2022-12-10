@@ -26,6 +26,22 @@ export const addBlogThunk = (blog) => {
     }
 }
 
+export const updateBlogThunk = (id, blog) => {
+    return async (dispatch) => {
+        const res = await fetch(`${URL}/blog/${id}`, {
+            method: 'PATCH', 
+            body: JSON.stringify(blog),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+
+        if (res) {
+            dispatch(getBlogsThunk())
+        }
+    }
+}
+
 export const removeBlogThunk = (id) => {
     return async (dispatch) => {
         const res = await fetch(`${URL}/blog/${id}`, {

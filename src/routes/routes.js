@@ -7,6 +7,7 @@ import ReadingHistory from "../pages/Main/ReadingHistory";
 import Home from "../pages/Main/Home";
 import TopRated from "../pages/Main/TopRated";
 import Blog from "../pages/Main/Blog";
+import UpdateBlog from "../pages/Dashboard/UpdateBlog";
 
 const routes = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const routes = createBrowserRouter([
       {
         path: "add-blog",
         element: <AddBlog />,
+      },
+      {
+        path: "update-blog/:id",
+        element: <UpdateBlog />,
       },
     ],
   },
