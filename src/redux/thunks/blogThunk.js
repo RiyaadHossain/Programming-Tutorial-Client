@@ -1,6 +1,8 @@
-import { loaded } from "../actions/blogAction"
+import { addBlog, loaded } from "../actions/blogAction"
 
-export const getBlogs = () => {
+const URL = "https://programming-tutorial-server.vercel.app/"
+
+export const getBlogsThunk = () => {
     return async (dispatch, getState) => {
         const res = await fetch('products.json')
         const data = await res.json()
@@ -8,6 +10,12 @@ export const getBlogs = () => {
     }
 }
 
-export const addBlog = () => {
-
+export const addBlogThunk = () => {
+    return async (dispatch, getState) => {
+        const res = await fetch(URL)
+        const data = await res.json()
+        if (data) {
+            dispatch(addBlog(data))
+        }
+    }
 }

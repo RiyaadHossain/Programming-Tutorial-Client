@@ -6,14 +6,14 @@ import {
   REMOVE_CONTENT,
 } from "../actionTypes/actionTypes";
 
-export const addProduct = (blog) => {
+export const addBlog = (blog) => {
   return {
     type: ADD_CONTENT,
     payload: blog,
   };
 };
 
-export const removeProduct = (id) => {
+export const removeBlog = (id) => {
   return {
     type: REMOVE_CONTENT,
     payload: id,

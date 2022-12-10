@@ -8,13 +8,7 @@
     "brand": "amd",
     "details": "Conscious of its spiritual and moral heritage, the Union is founded on the indivisible, universal values of human dignity, freedom, equality and solidarity; it is based on the principles of democracy and the rule of law. It places the individual at the heart of its activities, by establishing the citizenship of the Union and by creating an area of freedom, security and justice.",
     "price": 128200,
-    "tags": [
-      "travel",
-      "programming",
-      "sports",
-      "religion",
-      "phycological facts"
-    ]
+    "tags": ["programming", "sports", "religion", "phycological facts"]
   },
   {
     "_id": 2,
@@ -25,13 +19,7 @@
     "brand": "intel",
     "details": "Conscious of its spiritual and moral heritage, the Union is founded on the indivisible, universal values of human dignity, freedom, equality and solidarity; it is based on the principles of democracy and the rule of law. It places the individual at the heart of its activities, by establishing the citizenship of the Union and by creating an area of freedom, security and justice.",
     "price": 41800,
-    "tags": [
-      "travel",
-      "programming",
-      "sports",
-      "religion",
-      "phycological facts"
-    ]
+    "tags": ["sports", "religion", "phycological facts"]
   },
   {
     "_id": 3,
@@ -59,13 +47,7 @@
     "brand": "intel",
     "details": "Conscious of its spiritual and moral heritage, the Union is founded on the indivisible, universal values of human dignity, freedom, equality and solidarity; it is based on the principles of democracy and the rule of law. It places the individual at the heart of its activities, by establishing the citizenship of the Union and by creating an area of freedom, security and justice.",
     "price": 56700,
-    "tags": [
-      "travel",
-      "programming",
-      "sports",
-      "religion",
-      "phycological facts"
-    ]
+    "tags": ["religion", "travel", "programming"]
   },
   {
     "_id": 5,
@@ -76,13 +58,7 @@
     "brand": "intel",
     "details": "Conscious of its spiritual and moral heritage, the Union is founded on the indivisible, universal values of human dignity, freedom, equality and solidarity; it is based on the principles of democracy and the rule of law. It places the individual at the heart of its activities, by establishing the citizenship of the Union and by creating an area of freedom, security and justice.",
     "price": 102200,
-    "tags": [
-      "travel",
-      "programming",
-      "sports",
-      "religion",
-      "phycological facts"
-    ]
+    "tags": ["phycological facts", "religion"]
   },
   {
     "_id": 6,
@@ -93,13 +69,7 @@
     "brand": "intel",
     "details": "Conscious of its spiritual and moral heritage, the Union is founded on the indivisible, universal values of human dignity, freedom, equality and solidarity; it is based on the principles of democracy and the rule of law. It places the individual at the heart of its activities, by establishing the citizenship of the Union and by creating an area of freedom, security and justice.",
     "price": 86200,
-    "tags": [
-      "travel",
-      "programming",
-      "sports",
-      "religion",
-      "phycological facts"
-    ]
+    "tags": ["programming", "religion", "phycological facts"]
   },
   {
     "_id": 7,
@@ -110,13 +80,7 @@
     "brand": "intel",
     "details": "Conscious of its spiritual and moral heritage, the Union is founded on the indivisible, universal values of human dignity, freedom, equality and solidarity; it is based on the principles of democracy and the rule of law. It places the individual at the heart of its activities, by establishing the citizenship of the Union and by creating an area of freedom, security and justice.",
     "price": 84000,
-    "tags": [
-      "travel",
-      "programming",
-      "sports",
-      "religion",
-      "phycological facts"
-    ]
+    "tags": ["religion", "travel", "programming"]
   },
   {
     "_id": 8,

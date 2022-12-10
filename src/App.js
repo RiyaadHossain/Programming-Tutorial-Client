@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { RouterProvider } from "react-router-dom";
-import { getBlogs } from "./redux/thunks/blogThunk";
+import { getBlogsThunk } from "./redux/thunks/blogThunk";
 import routes from "./routes/routes";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getBlogs())
+    dispatch(getBlogsThunk())
   }, [dispatch])
 
   return (

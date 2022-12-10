@@ -5,12 +5,15 @@ import BlogCard from "../../components/BlogCard";
 const Home = () => {
 
   const blogs = useSelector(state => state.blog.blogs)
-  const tags = useSelector(state => state.filter.tags)
-  console.log(tags)
+  // const tags = useSelector(state => state.filter.tags)
 
-  let content = blogs.map((blog) => (
+  let content = blogs
+    // .filter(blog => blog.tags.forEach(blogTag => tags.includes(blogTag)))
+    .map((blog) => (
     <BlogCard key={blog._id} blog={blog} />
-  ))
+    ))
+  
+  console.log(blogs.filter(blog => blog.tags.length));
 
   const activeClass = "text-white  bg-indigo-500 border-white";
 
