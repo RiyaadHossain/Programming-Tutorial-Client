@@ -1,7 +1,7 @@
-import { FILTER_BY_TAG } from "../actionTypes/actionTypes";
+import { FILTER_BY_TAG, FILTER_BY_UPLOAD } from "../actionTypes/actionTypes";
 
 const initialState = {
-    tags: [],
+    tags: '',
     updateTime: ""
 };
 
@@ -12,14 +12,16 @@ const filterReducer = (state = initialState, action) => {
             if (included) {
                 return {
                     ...state,
-                    tags: [...state.tags.filter(tag => tag !== action.payload)]
+                    tags: ''
                 }
             }
             return {
                 ...state,
-                tags: [...state.tags, action.payload]
+                tags: action.payload
             }
 
+        case FILTER_BY_UPLOAD:
+            return {...state, updateTime: action.payload}
         default:
             return state
     }

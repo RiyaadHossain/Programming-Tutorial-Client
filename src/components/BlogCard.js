@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 import { BiListPlus } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -10,7 +11,7 @@ const BlogCard = ({ blog }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate()
   const { pathname } = useLocation();
-  const tags = useSelector(state => state.filter.tags)
+  const { tags } = useSelector(state => state.filter)
 
   const seeDetails = (id) => {
     dispatch(addToHistory(blog))
@@ -26,11 +27,11 @@ const BlogCard = ({ blog }) => {
           <p> {blog.quantity} </p>
         </div>
       )}
-      <div className='h-52 w-52 mx-auto overflow-hidden mb-7'>
-        <img className="" src={blog.image} alt={blog.name} />
+      <div className='h-52 w-80 mx-auto overflow-hidden mb-7'>
+        <img className="h-full w-full object-cover" src={blog.image} alt={blog.name} />
       </div>
       <h1 className='font-bold '>{blog.name}</h1>
-      <p className='mb-3'><span className="font-semibold">Time:</span> {blog.time}min</p>
+      <div className='my-3 flex justify-between'><p><span className="font-semibold">Time:</span> {blog.time}min</p><p className="text-cyan-500">{moment(blog.postedAt._d).format('MMM Do, YYYY')}</p></div>
       <div className=' flex-1'>
         <ul className='space-y-2'>
           <li className='text-sm '>
@@ -47,7 +48,7 @@ const BlogCard = ({ blog }) => {
           onClick={() => seeDetails(blog._id)}
           className='bg-indigo-500 rounded-full py-1 px-2 flex-1 text-white text-bold'
         >
-          See Details
+          Read More
         </button>
 
         <button
@@ -57,16 +58,6 @@ const BlogCard = ({ blog }) => {
           <BiListPlus className='text-white' />
         </button>
 
-        {/* {pathname.includes("cart") && (
-          <button
-            title='Remove'
-            onClick={() => dispatch(removeFromCart(blog))}
-            className='flex justify-between px-3 bg-red-500 text-white p-1 rounded-full flex-1'
-          >
-            <p>Remove</p>
-            <MdDeleteForever size='25' />
-          </button>
-        )} */}
       </div>
     </div>
   );
