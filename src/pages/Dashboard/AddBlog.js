@@ -8,16 +8,17 @@ const AddBlog = () => {
   const dispatch = useDispatch()
   const { register, handleSubmit, reset } = useForm();
 
-  const submit = (data) => {
+  const submit = ({name, image, time, details, tag1, tag2, tag3, tag4}) => {
     const blog = {
-      name: data.name,
-      image: data.image,
-      time: data.time,
+      name,
+      image,
+      time,
+      details,
       tags: [
-        data.tag1,
-        data.tag2,
-        data.tag3,
-        data.tag4,
+        tag1 ? tag1 : null,
+        tag2 ? tag2 : null,
+        tag3 ? tag3 : null,
+        tag4 ? tag4 : null,
       ]
     };
 
@@ -48,11 +49,16 @@ const AddBlog = () => {
           <label className='mb-2' htmlFor='time'>
             Time
           </label>
-          <input type='text' name='time' id='time' {...register("time")} />
-          <h1 className="mt-6 font-bold text-2xl">Tags:</h1>
+          <input type='number' name='time' id='time' {...register("time")} />
         </div>
 
-        <div className='flex flex-col w-full max-w-xs'></div>
+        <div className='flex flex-col w-full max-w-xs'>
+          <label className='mb-2' htmlFor='details'>
+            Description
+          </label>
+          <input type='text' name='details' id='details' {...register("details")} />
+        </div>
+
         <div className='flex flex-col w-full max-w-xs'>
           <label className='mb-2' htmlFor='tag1'>
             Tag 1

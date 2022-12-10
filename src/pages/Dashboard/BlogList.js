@@ -1,9 +1,11 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {BsPencilSquare} from "react-icons/bs"
+import { removeBlogThunk } from "../../redux/thunks/blogThunk";
 
 const ProductList = () => {
 
+  const dispatch = useDispatch()
   const blogs = useSelector(state => state.blog.blogs)
 
   return (
@@ -52,7 +54,7 @@ const ProductList = () => {
                   </td>
                   <td className='p-2'>
                     <div className='flex justify-center'>
-                      <button>
+                      <button onClick={() => dispatch(removeBlogThunk(_id))}>
                         <svg
                           className='w-8 h-8 hover:text-blue-600 rounded-full hover:bg-gray-100 p-1'
                           fill='none'

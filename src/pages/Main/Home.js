@@ -13,7 +13,9 @@ const Home = () => {
     <BlogCard key={blog._id} blog={blog} />
     ))
   
-  console.log(blogs.filter(blog => blog.tags.length));
+  if (!blogs.length) {
+    return <p>Loading...</p>
+  }
 
   const activeClass = "text-white  bg-indigo-500 border-white";
 

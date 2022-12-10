@@ -1,21 +1,40 @@
-import { addBlog, loaded } from "../actions/blogAction"
+import { addBlog, loaded, removeBlog } from "../actions/blogAction"
 
-const URL = "https://programming-tutorial-server.vercel.app/"
+const URL = "https://programming-tutorial-server.vercel.app"
 
 export const getBlogsThunk = () => {
     return async (dispatch, getState) => {
-        const res = await fetch('products.json')
-        const data = await res.json()
+        const res = await fetch(`${URL}/blogs`)
+        const { data } = await res.json()
         dispatch(loaded(data))
     }
 }
 
-export const addBlogThunk = () => {
+export const addBlogThunk = (blog) => {
     return async (dispatch, getState) => {
-        const res = await fetch(URL)
+        const res = await fetch(`${URL}/blog`, {
+            method: 'POST',
+            body: JSON.stringify(blog),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
         const data = await res.json()
         if (data) {
             dispatch(addBlog(data))
+        }
+    }
+}
+
+export const removeBlogThunk = (id) => {
+    return async (dispatch) => {
+        const res = await fetch(`${URL}/blog/${id}`, {
+            method: 'DELETE'
+        })
+
+        dispatch(getBlogsThunk())
+        if (res) {
+            dispatch(removeBlog(id))
         }
     }
 }

@@ -26,8 +26,8 @@ const BlogCard = ({ blog }) => {
           <p> {blog.quantity} </p>
         </div>
       )}
-      <div className='h-52 w-52 mx-auto'>
-        <img src={blog.image} alt={blog.name} />
+      <div className='h-52 w-52 mx-auto overflow-hidden mb-7'>
+        <img className="" src={blog.image} alt={blog.name} />
       </div>
       <h1 className='font-bold '>{blog.name}</h1>
       <p className='mb-3'><span className="font-semibold">Time:</span> {blog.time}min</p>
@@ -39,7 +39,7 @@ const BlogCard = ({ blog }) => {
         </ul>
       </div>
       <div className="flex flex-wrap mt-3 gap-2">{blog.tags.map((tag, i) =>
-        <span onClick={() => dispatch(filterByTag(tag))} key={i} className={`border hover:bg-cyan-500 cursor-pointer text-black ${tags.includes(tag) ? active : null} border-cyan-500 text-xs px-2 py-[2px] rounded-full`}>{tag}</span>
+        tag && <span onClick={() => dispatch(filterByTag(tag))} key={i} className={`border hover:bg-cyan-500 cursor-pointer text-black ${tags.includes(tag) ? active : null} border-cyan-500 text-xs px-2 py-[2px] rounded-full`}>{tag}</span>
       )}</div>
       <div className='flex gap-2 mt-5'>
 
