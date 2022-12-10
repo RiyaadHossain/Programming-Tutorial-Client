@@ -17,28 +17,24 @@ const Home = () => {
       }
       return blog
     })
-    /* .filter(blog => {
-      if (updateTime.length) {
-        if (updateTime === 'first') {
-          return (a, b) => {
-            return a.
-          }
-        }
-        if (updateTime === 'last') {
-          
-        }
-      }
-      return blog
-    }) */
     .map((blog) => (
       <BlogCard key={blog._id} blog={blog} />
     ))
-  
-  if (updateTime.length) {
-    content.sort((a, b) => {
-      return a.postedAt._d - b.postedAt._d
-    })
-  }
+
+  // Filter by Upload Time   
+
+  /* if (updateTime.length) {
+    if (updateTime === 'first') {
+      return content.sort((a, b) => {
+        return a.props.blog.postedAt._d - b.props.blog.postedAt._d
+      })
+    }
+    if (updateTime === 'last') {
+      return content.sort((a, b) => {
+        return a.props.blog.postedAt._d + b.props.blog.postedAt._d
+      })
+    }
+  } */
 
   if (!blogs.length) {
     return <h2 className="text-2xl font-bold text-center mt-16">Nothig to show</h2>
