@@ -2,12 +2,12 @@
   {
     "_id": 1,
     "name": "JavaScript - Beginner to Advance",
+    "time": 3,
     "image": "https://live.staticflickr.com/65535/52522584794_4a9898a992_o.jpg",
     "status": true,
     "brand": "amd",
     "details": "Conscious of its spiritual and moral heritage, the Union is founded on the indivisible, universal values of human dignity, freedom, equality and solidarity; it is based on the principles of democracy and the rule of law. It places the individual at the heart of its activities, by establishing the citizenship of the Union and by creating an area of freedom, security and justice.",
     "price": 128200,
-    "rating": 3,
     "tags": [
       "travel",
       "programming",
@@ -19,12 +19,12 @@
   {
     "_id": 2,
     "name": "Intel 10th Gen Core i3-10100 Gaming PC",
+    "time": 6,
     "image": "https://live.staticflickr.com/65535/52521844202_dd853335c9_o.jpg",
     "status": true,
     "brand": "intel",
     "details": "Conscious of its spiritual and moral heritage, the Union is founded on the indivisible, universal values of human dignity, freedom, equality and solidarity; it is based on the principles of democracy and the rule of law. It places the individual at the heart of its activities, by establishing the citizenship of the Union and by creating an area of freedom, security and justice.",
     "price": 41800,
-    "rating": 4,
     "tags": [
       "travel",
       "programming",
@@ -36,12 +36,12 @@
   {
     "_id": 3,
     "name": "AMD Ryzen 5 3600 Gaming PC",
+    "time": 5,
     "image": "https://live.staticflickr.com/65535/52522855818_98bdd4c07a_o.jpg",
     "status": false,
     "brand": "amd",
     "details": "Conscious of its spiritual and moral heritage, the Union is founded on the indivisible, universal values of human dignity, freedom, equality and solidarity; it is based on the principles of democracy and the rule of law. It places the individual at the heart of its activities, by establishing the citizenship of the Union and by creating an area of freedom, security and justice.",
     "price": 84400,
-    "rating": 5,
     "tags": [
       "travel",
       "programming",
@@ -53,12 +53,12 @@
   {
     "_id": 4,
     "name": "Gaming PC 10th Gen Core i5-10400f",
+    "time": 7,
     "image": "https://live.staticflickr.com/65535/52522584684_9fa14a3332_o.jpg",
     "status": false,
     "brand": "intel",
     "details": "Conscious of its spiritual and moral heritage, the Union is founded on the indivisible, universal values of human dignity, freedom, equality and solidarity; it is based on the principles of democracy and the rule of law. It places the individual at the heart of its activities, by establishing the citizenship of the Union and by creating an area of freedom, security and justice.",
     "price": 56700,
-    "rating": 3,
     "tags": [
       "travel",
       "programming",
@@ -70,10 +70,10 @@
   {
     "_id": 5,
     "name": "Intel 10th Gen Core i7-10700 Gaming PC",
+    "time": 3,
     "image": "https://live.staticflickr.com/65535/52522308736_8453894269_o.jpg",
     "status": false,
     "brand": "intel",
-    "rating": 5,
     "details": "Conscious of its spiritual and moral heritage, the Union is founded on the indivisible, universal values of human dignity, freedom, equality and solidarity; it is based on the principles of democracy and the rule of law. It places the individual at the heart of its activities, by establishing the citizenship of the Union and by creating an area of freedom, security and justice.",
     "price": 102200,
     "tags": [
@@ -87,12 +87,12 @@
   {
     "_id": 6,
     "name": "Intel Core i5-11400 11th Gen Gaming PC",
+    "time": 3,
     "image": "https://live.staticflickr.com/65535/52522308721_4f2de69503_o.jpg",
     "status": true,
     "brand": "intel",
     "details": "Conscious of its spiritual and moral heritage, the Union is founded on the indivisible, universal values of human dignity, freedom, equality and solidarity; it is based on the principles of democracy and the rule of law. It places the individual at the heart of its activities, by establishing the citizenship of the Union and by creating an area of freedom, security and justice.",
     "price": 86200,
-    "rating": 2,
     "tags": [
       "travel",
       "programming",
@@ -104,12 +104,12 @@
   {
     "_id": 7,
     "name": "Intel 11th Gen Core i5-11400f Gaming PC",
+    "time": 4,
     "image": "https://live.staticflickr.com/65535/52522855818_98bdd4c07a_o.jpg",
     "status": true,
     "brand": "intel",
     "details": "Conscious of its spiritual and moral heritage, the Union is founded on the indivisible, universal values of human dignity, freedom, equality and solidarity; it is based on the principles of democracy and the rule of law. It places the individual at the heart of its activities, by establishing the citizenship of the Union and by creating an area of freedom, security and justice.",
     "price": 84000,
-    "rating": 5,
     "tags": [
       "travel",
       "programming",
@@ -121,12 +121,12 @@
   {
     "_id": 8,
     "name": "AMD Ryzen 7 5800X3D Gaming PC",
+    "time": 2,
     "image": "https://live.staticflickr.com/65535/52521844332_5f738162d8_o.jpg",
     "status": true,
     "brand": "amd",
     "details": "Conscious of its spiritual and moral heritage, the Union is founded on the indivisible, universal values of human dignity, freedom, equality and solidarity; it is based on the principles of democracy and the rule of law. It places the individual at the heart of its activities, by establishing the citizenship of the Union and by creating an area of freedom, security and justice.",
     "price": 399999,
-    "rating": 3,
     "tags": [
       "travel",
       "programming",
